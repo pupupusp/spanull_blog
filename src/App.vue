@@ -1,28 +1,29 @@
 <script setup lang="ts">
 import { NConfigProvider } from "naive-ui";
 import { zhCN, dateZhCN } from "naive-ui";
+import { globalStore } from "@/stores";
+import { darkTheme } from "naive-ui";
 
+const store = globalStore();
 const lightThemeOverrides: Object = {
-	// common: {
-	// 	primaryColor: "#000000",
-	// },
+	common: {
+		...store.primaryStyle,
+	},
 };
 
 const darkThemeOverrides: Object = {
-	// common: {
-	// 	primaryColor: "#FFFFFF",
-	// },
+	common: {
+		primaryColor: "#FFFFFF",
+	},
 };
-
-const theme = null;
 </script>
 
 <template>
 	<n-config-provider
 		:locale="zhCN"
 		:date-locale="dateZhCN"
-		:theme="theme"
-		:theme-overrides="theme === null ? lightThemeOverrides : darkThemeOverrides"
+		:theme="store.theme === 'light' ? null : darkTheme"
+		:theme-overrides="store.theme === 'light' ? lightThemeOverrides : darkThemeOverrides"
 	>
 		<RouterView></RouterView>
 	</n-config-provider>

@@ -3,8 +3,9 @@ import App from "./App.vue";
 import router from "@/router";
 import { createPinia } from "pinia"; // 导入 Pinia
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
+import "@/scss/var.scss";
 import "./style.css";
-import "@/less/index.less";
+import "@/scss/index.scss";
 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);

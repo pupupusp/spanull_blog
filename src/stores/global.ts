@@ -1,8 +1,14 @@
 import { defineStore } from "pinia";
 
-export const useStore = defineStore("main", {
+export const globalStore = defineStore("main", {
 	state: () => ({
 		theme: <string>"light",
+		primaryStyle: {
+			primaryColor: "#18a058",
+			primaryColorPressed: "#0c7a43",
+			primaryColorHover: "#36ad6a",
+			primaryColorSuppl: "#36ad6a",
+		},
 		message: "",
 	}),
 	getters: {

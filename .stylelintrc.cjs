@@ -37,6 +37,7 @@ module.exports = {
 		"selector-class-pattern": null, // 强制选择器类名的格式
 		"scss/at-import-partial-extension": null, // 解决不能引入scss文件
 		"value-no-vendor-prefix": null, // 关闭 vendor-prefix(为了解决多行省略 -webkit-box)
+		"scss/dollar-variable-pattern": null, //$变量
 		"selector-pseudo-class-no-unknown": [
 			true,
 			{
