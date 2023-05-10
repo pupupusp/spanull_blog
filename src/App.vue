@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { NConfigProvider } from "naive-ui";
-import { zhCN, dateZhCN } from "naive-ui";
 import { globalStore } from "@/stores";
 import { darkTheme } from "naive-ui";
+import { zhCN, dateZhCN } from "naive-ui";
 
 const store = globalStore();
 const lightThemeOverrides: Object = {

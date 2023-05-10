@@ -16,6 +16,7 @@
 		"upload": "vue-tsc --noEmit && vite build && scp -r ./dist root@1.14.94.106:/home/docker/nginx/project"
 	},
 	"dependencies": {
+		"colorthief": "^2.4.0",
 		"node-sass": "^8.0.0",
 		"pinia": "^2.0.35",
 		"pinia-plugin-persistedstate": "^3.1.0",
