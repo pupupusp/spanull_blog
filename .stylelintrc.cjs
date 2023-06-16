@@ -44,5 +44,6 @@ module.exports = {
 				ignorePseudoClasses: ["global", "v-deep", "deep"],
 			},
 		],
+		"custom-property-pattern": null,
 	},
 };
