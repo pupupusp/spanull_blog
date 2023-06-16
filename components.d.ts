@@ -9,12 +9,24 @@ export {};
 
 declare module "@vue/runtime-core" {
 	export interface GlobalComponents {
-		CommonBar: typeof import("./src/components/CommonBar.vue")["default"];
 		CommonContent: typeof import("./src/components/CommonContent.vue")["default"];
+		HomeBar: typeof import("./src/views/bar/HomeBar.vue")["default"];
+		HomeContent: typeof import("./src/views/content/HomeContent.vue")["default"];
+		HomeSider: typeof import("./src/views/sider/HomeSider.vue")["default"];
 		NAffix: typeof import("naive-ui")["NAffix"];
+		NBackTop: typeof import("naive-ui")["NBackTop"];
 		NButton: typeof import("naive-ui")["NButton"];
+		NGradientText: typeof import("naive-ui")["NGradientText"];
 		NIcon: typeof import("naive-ui")["NIcon"];
+		NImage: typeof import("naive-ui")["NImage"];
+		NLayout: typeof import("naive-ui")["NLayout"];
+		NLayoutContent: typeof import("naive-ui")["NLayoutContent"];
+		NLayoutHeader: typeof import("naive-ui")["NLayoutHeader"];
+		NMenu: typeof import("naive-ui")["NMenu"];
+		NScrollbar: typeof import("naive-ui")["NScrollbar"];
+		NSpace: typeof import("naive-ui")["NSpace"];
 		RouterLink: typeof import("vue-router")["RouterLink"];
 		RouterView: typeof import("vue-router")["RouterView"];
+		TextTool: typeof import("./src/components/TextTool.vue")["default"];
 	}
 }

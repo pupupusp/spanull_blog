@@ -13,7 +13,8 @@
 		"lint:lint-staged": "lint-staged",
 		"commit": "git-cz && git push",
 		"commitall": "git pull && git add -A && git-cz && git push",
-		"upload": "vue-tsc --noEmit && vite build && scp -r ./dist root@1.14.94.106:/home/docker/nginx/project"
+		"upload": "vue-tsc --noEmit && vite build && scp -r ./dist root@1.14.94.106:/home/docker/nginx/project",
+		"lint:css": "stylelint **/*.sass **/*.scss **/*.css --fix"
 	},
 	"dependencies": {
 		"colorthief": "^2.4.0",
@@ -22,7 +23,6 @@
 		"sass": "^1.62.1",
 		"sass-loader": "^13.3.0",
 		"vue": "^3.2.47",
-		"vue-router": "4",
 		"vue-style-loader": "^4.1.3"
 	},
 	"devDependencies": {
@@ -62,6 +62,7 @@
 		"unplugin-auto-import": "^0.15.3",
 		"unplugin-vue-components": "^0.24.1",
 		"vite": "^4.3.2",
+		"vue-router": "^4.0.1",
 		"vue-tsc": "^1.4.2"
 	},
 	"lint-staged": {

@@ -3,11 +3,14 @@ import { defineStore } from "pinia";
 export const globalStore = defineStore("main", {
 	state: () => ({
 		theme: <string>"light",
-		primaryStyle: {
+		primaryStyle: <Record<string, string>>{
 			primaryColor: "#18a058",
 			primaryColorPressed: "#0c7a43",
 			primaryColorHover: "#36ad6a",
 			primaryColorSuppl: "#36ad6a",
+			colorHoverPrimary: "#36ad6a",
+			textColorHover: "#36ad6a",
+			textColorTextHover: "#36ad6a",
 		},
 		message: "",
 	}),
@@ -34,6 +37,14 @@ export const globalStore = defineStore("main", {
 			// 这里的 this 是当前的 Store 实例
 			this.message = newMessage;
 			return "Sync done.";
+		},
+		// 修改颜色
+		updateTheme(newTheme: Record<string, string>): void {
+			this.primaryStyle = { ...this.primaryStyle, ...newTheme };
+
+			for (const key in newTheme) {
+				document.documentElement.style.setProperty("--" + key, newTheme[key]);
+			}
 		},
 	},
 	persist: true,

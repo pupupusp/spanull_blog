@@ -1,105 +1,178 @@
 :root {
-	$fontFamily: v-sans, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+	--fontFamily: v-sans, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji,
 		Segoe UI Symbol;
-	$fontFamilyMono: v-mono, SFMono-Regular, Menlo, Consolas, Courier, monospace;
-	$fontWeight: 400;
-	$fontWeightStrong: 500;
-	$cubicBezierEaseInOut: cubic-bezier(0.4, 0, 0.2, 1);
-	$cubicBezierEaseOut: cubic-bezier(0, 0, 0.2, 1);
-	$cubicBezierEaseIn: cubic-bezier(0.4, 0, 1, 1);
-	$borderRadius: 3px;
-	$borderRadiusSmall: 2px;
-	$fontSize: 14px;
-	$fontSizeMini: 12px;
-	$fontSizeTiny: 12px;
-	$fontSizeSmall: 14px;
-	$fontSizeMedium: 14px;
-	$fontSizeLarge: 15px;
-	$fontSizeHuge: 16px;
-	$lineHeight: 1.6;
-	$heightMini: 16px;
-	$heightTiny: 22px;
-	$heightSmall: 28px;
-	$heightMedium: 34px;
-	$heightLarge: 40px;
-	$heightHuge: 46px;
-	$baseColor: #ffffff;
-	$primaryColor: #18a058;
-	$primaryColorHover: #36ad6a;
-	$primaryColorPressed: #0c7a43;
-	$primaryColorSuppl: #36ad6a;
-	$infoColor: #2080f0;
-	$infoColorHover: #4098fc;
-	$infoColorPressed: #1060c9;
-	$infoColorSuppl: #4098fc;
-	$successColor: #18a058;
-	$successColorHover: #36ad6a;
-	$successColorPressed: #0c7a43;
-	$successColorSuppl: #36ad6a;
-	$warningColor: #f0a020;
-	$warningColorHover: #fcb040;
-	$warningColorPressed: #c97c10;
-	$warningColorSuppl: #fcb040;
-	$errorColor: #d03050;
-	$errorColorHover: #de576d;
-	$errorColorPressed: #ab1f3f;
-	$errorColorSuppl: #de576d;
-	$textColorBase: #000000;
-	$textColor1: rgb(31 34 37);
-	$textColor2: rgb(51 54 57);
-	$textColor3: rgb(118 124 130);
-	$textColorDisabled: rgb(194 194 19 / 100%);
-	$placeholderColor: rgb(194 194 194 / 100%);
-	$placeholderColorDisabled: rgb(209 209 209 / 100%);
-	$iconColor: rgb(194 194 194 / 100%);
-	$iconColorHover: rgb(146 146 146 / 100%);
-	$iconColorPressed: rgb(175 175 175 / 100%);
-	$iconColorDisabled: rgb(209 209 209 / 100%);
-	$opacity1: 0.82;
-	$opacity2: 0.72;
-	$opacity3: 0.38;
-	$opacity4: 0.24;
-	$opacity5: 0.18;
-	$dividerColor: rgb(239 239 245);
-	$borderColor: rgb(224 224 230);
-	$closeIconColor: rgb(102 102 102 / 100%);
-	$closeIconColorHover: rgb(102 102 102 / 100%);
-	$closeIconColorPressed: rgb(102 102 102 / 100%);
-	$closeColorHover: rgb(0 0 0 / 9%);
-	$closeColorPressed: rgb(0 0 0 / 13%);
-	$clearColor: rgb(194 194 194 / 100%);
-	$clearColorHover: rgb(146 146 146 / 100%);
-	$clearColorPressed: rgb(175 175 175 / 100%);
-	$scrollbarColor: rgb(0 0 0 / 25%);
-	$scrollbarColorHover: rgb(0 0 0 / 40%);
-	$scrollbarWidth: 5px;
-	$scrollbarHeight: 5px;
-	$scrollbarBorderRadius: 5px;
-	$progressRailColor: rgb(235 235 235 / 100%);
-	$railColor: rgb(219 219 223);
-	$popoverColor: #ffffff;
-	$tableColor: #ffffff;
-	$cardColor: #ffffff;
-	$modalColor: #ffffff;
-	$bodyColor: #ffffff;
-	$tagColor: #eeeeee;
-	$avatarColor: rgb(204 204 204 / 100%);
-	$invertedColor: rgb(0 20 40);
-	$inputColor: rgb(255 255 255 / 100%);
-	$codeColor: rgb(244 244 248);
-	$tabColor: rgb(247 247 250);
-	$actionColor: rgb(250 250 252);
-	$tableHeaderColor: rgb(250 250 252);
-	$hoverColor: rgb(243 243 245);
-	$tableColorHover: rgb(0 0 100 / 3%);
-	$tableColorStriped: rgb(0 0 100 / 2%);
-	$pressedColor: rgb(237 237 239);
-	$opacityDisabled: 0.5;
-	$inputColorDisabled: rgb(250 250 252);
-	$buttonColor2: rgb(46 51 56 / 5%);
-	$buttonColor2Hover: rgb(46 51 56 / 9%);
-	$buttonColor2Pressed: rgb(46 51 56 / 13%);
-	$boxShadow1: 0 1px 2px -2px rgb(0 0 0 / 8%), 0 3px 6px 0 rgb(0 0 0 / 6%), 0 5px 12px 4px rgb(0 0 0 / 4%);
-	$boxShadow2: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
-	$boxShadow3: 0 6px 16px -9px rgb(0 0 0 / 8%), 0 9px 28px 0 rgb(0 0 0 / 5%), 0 12px 48px 16px rgb(0 0 0 / 3%);
+	--fontFamilyMono: v-mono, SFMono-Regular, Menlo, Consolas, Courier, monospace;
+	--fontWeight: 400;
+	--fontWeightStrong: 500;
+	--cubicBezierEaseInOut: cubic-bezier(0.4, 0, 0.2, 1);
+	--cubicBezierEaseOut: cubic-bezier(0, 0, 0.2, 1);
+	--cubicBezierEaseIn: cubic-bezier(0.4, 0, 1, 1);
+	--borderRadius: 3px;
+	--borderRadiusSmall: 2px;
+	--borderRadiusHuge: 8px;
+	--fontSize: 14px;
+	--fontSizeMini: 12px;
+	--fontSizeTiny: 12px;
+	--fontSizeSmall: 14px;
+	--fontSizeMedium: 14px;
+	--fontSizeLarge: 15px;
+	--fontSizeHuge: 16px;
+	--fontSizeTitle: 20px;
+	--lineHeight: 1.6;
+	--heightMini: 16px;
+	--heightTiny: 22px;
+	--heightSmall: 28px;
+	--heightMedium: 34px;
+	--heightLarge: 40px;
+	--heightHuge: 46px;
+	--baseColor: #ffffff;
+	--primaryColor: #18a058;
+	--primaryColorHover: #36ad6a;
+	--primaryColorPressed: #0c7a43;
+	--primaryColorSuppl: #36ad6a;
+	--infoColor: #2080f0;
+	--infoColorHover: #4098fc;
+	--infoColorPressed: #1060c9;
+	--infoColorSuppl: #4098fc;
+	--successColor: #18a058;
+	--successColorHover: #36ad6a;
+	--successColorPressed: #0c7a43;
+	--successColorSuppl: #36ad6a;
+	--warningColor: #f0a020;
+	--warningColorHover: #fcb040;
+	--warningColorPressed: #c97c10;
+	--warningColorSuppl: #fcb040;
+	--errorColor: #d03050;
+	--errorColorHover: #de576d;
+	--errorColorPressed: #ab1f3f;
+	--errorColorSuppl: #de576d;
+	--textColorBase: #000000;
+	--textColor1: rgb(31 34 37);
+	--textColor2: rgb(51 54 57);
+	--textColor3: rgb(118 124 130);
+	--textColorDisabled: rgb(194 194 19 / 100%);
+	--placeholderColor: rgb(194 194 194 / 100%);
+	--placeholderColorDisabled: rgb(209 209 209 / 100%);
+	--iconColor: rgb(194 194 194 / 100%);
+	--iconColorHover: rgb(146 146 146 / 100%);
+	--iconColorPressed: rgb(175 175 175 / 100%);
+	--iconColorDisabled: rgb(209 209 209 / 100%);
+	--opacity1: 0.82;
+	--opacity2: 0.72;
+	--opacity3: 0.38;
+	--opacity4: 0.24;
+	--opacity5: 0.18;
+	--dividerColor: rgb(239 239 245);
+	--borderColor: rgb(224 224 230);
+	--closeIconColor: rgb(102 102 102 / 100%);
+	--closeIconColorHover: rgb(102 102 102 / 100%);
+	--closeIconColorPressed: rgb(102 102 102 / 100%);
+	--closeColorHover: rgb(0 0 0 / 9%);
+	--closeColorPressed: rgb(0 0 0 / 13%);
+	--clearColor: rgb(194 194 194 / 100%);
+	--clearColorHover: rgb(146 146 146 / 100%);
+	--clearColorPressed: rgb(175 175 175 / 100%);
+	--scrollbarColor: rgb(0 0 0 / 25%);
+	--scrollbarColorHover: rgb(0 0 0 / 40%);
+	--scrollbarWidth: 5px;
+	--scrollbarHeight: 5px;
+	--scrollbarBorderRadius: 5px;
+	--progressRailColor: rgb(235 235 235 / 100%);
+	--railColor: rgb(219 219 223);
+	--popoverColor: #ffffff;
+	--tableColor: #ffffff;
+	--cardColor: #ffffff;
+	--modalColor: #ffffff;
+	--bodyColor: #ffffff;
+	--tagColor: #eeeeee;
+	--avatarColor: rgb(204 204 204 / 100%);
+	--invertedColor: rgb(0 20 40);
+	--inputColor: rgb(255 255 255 / 100%);
+	--codeColor: rgb(244 244 248);
+	--tabColor: rgb(247 247 250);
+	--actionColor: rgb(250 250 252);
+	--tableHeaderColor: rgb(250 250 252);
+	--hoverColor: rgb(243 243 245);
+	--tableColorHover: rgb(0 0 100 / 3%);
+	--tableColorStriped: rgb(0 0 100 / 2%);
+	--pressedColor: rgb(237 237 239);
+	--opacityDisabled: 0.5;
+	--inputColorDisabled: rgb(250 250 252);
+	--buttonColor2: rgb(46 51 56 / 5%);
+	--buttonColor2Hover: rgb(46 51 56 / 9%);
+	--buttonColor2Pressed: rgb(46 51 56 / 13%);
+	--boxShadow1: 0 1px 2px -2px rgb(0 0 0 / 8%), 0 3px 6px 0 rgb(0 0 0 / 6%), 0 5px 12px 4px rgb(0 0 0 / 4%);
+	--boxShadow2: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+	--boxShadow3: 0 6px 16px -9px rgb(0 0 0 / 8%), 0 9px 28px 0 rgb(0 0 0 / 5%), 0 12px 48px 16px rgb(0 0 0 / 3%);
+}
+#light {
+	--base-back: #ffffff;
+	--base-text: #3f3d55;
+	--page-back: #f3f7fd;
+}
+#dark {
+	--base-back: rgb(24 24 28);
+	--base-text: #d6d8da;
+	--page-back: #24292e;
+}
+
+// 宽高
+.width-100 {
+	width: 100%;
+}
+.height-100 {
+	height: 100%;
+}
+.all-100 {
+	width: 100%;
+	height: 100%;
+}
+
+// 字体
+.text-title {
+	font-size: var(--fontSizeTitle);
+	font-weight: var(--fontWeightStrong);
+	color: var(--base-text);
+}
+.text {
+	color: var(--base-text);
+}
+
+// 布局
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.row-center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.row-around {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
+.column-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+// 间距
+.padding-20 {
+	padding: 20px;
+}
+.padding-top-20 {
+	padding-top: 20px;
+}
+.padding-bottom-20 {
+	padding-bottom: 20px;
+}
+.margin-top-20 {
+	margin-top: 20px;
 }

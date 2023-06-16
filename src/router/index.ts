@@ -5,14 +5,15 @@ import { websiteTitle } from "~/config";
 const routes = [
 	{
 		path: "/",
-		component: () => import("@/views/CommonPage.vue"),
+		component: () => import("~/src/views/page/CommonPage.vue"),
 		children: [
 			{
 				path: "home",
 				name: "home",
 				components: {
-					default: () => import("@/components/CommonContent.vue"),
-					top: () => import("@/components/CommonBar.vue"),
+					default: () => import("~/src/views/content/HomeContent.vue"),
+					top: () => import("~/src/views/bar/HomeBar.vue"),
+					sider: () => import("~/src/views/sider/HomeSider.vue"),
 				},
 				meta: {
 					title: "首页",
